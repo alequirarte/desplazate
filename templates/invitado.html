@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Veterinaria-ALPHA{% endblock %}
+{% block head %}
+<style>
+
+    
+</style>
+{{super()}}
+
+{% endblock %}
+{% block body %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/bañarse.jpg" width="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/medicos.jpg" width="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/1.jpg" width="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/2.jpg" width="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/3.jpg" width="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/4.jpg" width="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/5.jpg" width="50%" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  {% endblock %}
+  {% block footer %}
+  
+  {% endblock %}

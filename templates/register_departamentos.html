@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Registrar departamento{% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_login">     
+        <form action="" method="POST">
+            <h2 id="titulo">Registrar departamento</h2>
+            <div id="registro">
+                <label for='direccion'>Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección">    
+            </div>
+            <div id="registro">
+                <label for='precio'>Precio:</label>
+                <input type="text" id="precio" name="precio" placeholder="Precio por mes">  
+            </div>
+            <div id="registro">
+                <label for='cp'>Codigo postal:</label>
+                <input type="text" id="cp" name="cp" placeholder="Codigo postal">    
+            </div>
+            <div id="registro">
+                <label for='detalles'>Detalles:</label>
+                <input type="text" id="detalles" name="detalles" placeholder="Detalles">    
+            </div>
+            
+         
+            <input id="registro" type="submit" name="enviar" value="Registrar">
+            
+            
+        </form>
+    </div>
+
+</div>
+
+    
+{% endblock %}

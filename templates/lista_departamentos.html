@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Lista departamentos {% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_mascotas"> 
+        <h2 id="titu"> Lista departamentos </h2>
+        
+
+
+        <div id="lista">
+            <ul id="lista"> 
+                
+                {% for usuario,diccionario in diccionario_casas.items() %}
+                        <li style="list-style-type: circle;">
+                            <h1 id="puntos"> {{diccionario[1]}}</h1>
+                        </li>
+                    
+                {% endfor %}
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

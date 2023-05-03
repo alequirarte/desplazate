@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% block title %}Departamento{% endblock %}
+{% block head %}
+<style>
+        /* Basic Styling */
+    html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    }
+
+        /* Columns */
+    .left-column {
+    width: 60%;
+    position: relative;
+    }
+    
+    .right-column {
+    width: 60%;
+    margin-top: 60px;
+    margin-left: 60px;
+    }
+
+
+    
+
+    /* Product Description */
+    .product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+    }
+    .product-description span {
+    font-size: 12px;
+    color: rgb(15, 90, 7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    }
+    .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+    }
+    .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    line-height: 24px;
+    }
+
+    /* Product amueblado */
+    .product-color {
+    margin-bottom: 30px;
+    }
+
+
+    .line {
+        border-bottom: 1px solid white;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .negrita {
+        font-weight: bold;
+    }
+
+    .space {
+        margin-right: 10px;
+    }
+
+    .tamaño {
+        font-size: 5px;
+    }
+
+    
+    
+    
+
+    /* Product Price */
+    .product-price {
+    display: flex;
+    align-items: center;
+    }
+    
+    .product-price span {
+    font-size: 20px;
+    font-weight: 300;
+    color: #000000;
+    margin-right: 20px;
+    }
+    
+    .cart-btn {
+    display: inline-block;
+    background-color: #7DC855;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+    }
+    .cart-btn:hover {
+    background-color: #64af3d;
+    }
+
+    #carouselExampleControldep{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+   }
+
+   .carousel-control {
+
+    color: white;
+    width: 15%;
+
+}
+</style>
+
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_login">     
+        <main class="container">
+ 
+            <!-- Left Column / Headphones Image -->
+            <div class="left-column">
+
+              
+
+              <div id="carouselExampleControldep" class="carousel slide" data-bs-ride="carousel">
+
+                {% if depa[0] > 6 %}
+
+                  <img src="/static/img/Casa1.png" width="100%" height="50%" alt="...">
+
+                  {% else %}         
+                      <img src="/static/img/Casa{{depa[0]}}.png" width="100%" height="50%" alt="...">
+                {% endif %} 
+            
+              </div>
+       
+            </div>
+         
+           
+            <!-- Right Column -->
+            <div class="right-column">
+           
+              <!-- Product Description -->
+
+  
+
+              <div class="product-description">
+                <span class="negrita">CASA EN RENTA</span>
+                <h3 class="negrita">Descripción: </h3>
+                <h4>        {{depa[4]}}           </h4>
+                <p>Dirección: {{depa[1]}}</p>
+              </div>
+           
+         
+           
+              <!-- Product Pricing -->
+              <div class="product-price">
+                <h5 class="negrita">Precio: $ {{depa[2]}}</h5>
+               
+                <span style="font-size: 15px; margin-left: 5px;"> (por mes)</span> <br>
+      
+                <a href="/rentar/{{depa[0]}}" class="cart-btn">Rentar</a>
+              </div>
+            </div>
+          </main>
+         
+  
+    </div>
+  
+</div>
+
+  
+
+
+
+
+
+
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

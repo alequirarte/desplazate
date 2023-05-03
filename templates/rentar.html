@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Rentar {% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+</div>
+<div class="contenedor__todo">
+    <h1 id="color2"> Completar el proceso</h1>
+    <div class="caja__trasera">
+        <form action="" method="POST">
+        <div id="caja__trasera-register">
+            <form action="" method="POST">
+            <h3 id="color">Descripción: </h3>
+            <h5 id="color1"> {{depa[4]}} </h5>
+
+        </div>
+        <div id="caja__trasera-register">
+                    <h2 id="color"> Fecha de inicio:</h2>
+                    <input type="date" name="fecha" id = "fecha"
+                    value={{hoy}}
+            min={{hoy}} max={{mes}}>
+        </div>
+
+        <div id="caja__trasera-register">
+            <h2 id="color" style="text-align: center;"> Contactarse con: José Antonio Quirarte Fimbres</h2>
+            <ul>
+
+                <li id="contact">Celular: 622 103 9867</li>
+                
+                <li id="contact">Correo: jose_quirarte@hotmail.com</li>
+                
+                <li id="contact"><a id="contact" href="https://api.whatsapp.com/send?phone=526221039867">Link Whatsapp</a></li>
+                
+            </ul>
+        </div>
+        
+        <div id="caja__trasera-register">
+            <input id="cart-btn" type="submit" name="enviar" value="terminar proceso">
+        </div>
+        </form>
+    </div>   
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

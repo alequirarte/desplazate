@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Lista de rentas {% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_mascotas"> 
+        <h2 id="titu"> Lista de rentas</h2>
+        
+
+
+        <div id="lista">
+            <ul id="lista"> 
+                
+                {% for usuario,diccionario in dicc_rentas.items() %}
+                    {% if diccionario[1] == id%}
+                        <li style="list-style-type: circle;">
+                           <a href="/departamento/{{diccionario[0]}}"> <h1 id="puntos">{{diccionario[2]}} - {{diccionario[3]}}</h1> </a> 
+                        </li>
+                    {% endif %}
+                    
+                {% endfor %}
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

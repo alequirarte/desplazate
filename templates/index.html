@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %}Desplázate{% endblock %}
+{% block head %}
+<style>
+
+    
+</style>
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+
+{% if first == true %}
+  <div class="alert alert-primary">
+    Logeado exitosamente 
+  </div>        
+{% endif %}
+
+
+{% if deslogeado == true %}
+  <div class="alert alert-primary">
+    Deslogeado exitosamente 
+  </div>        
+{% endif %}
+
+{% if invitado == true %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+  <h1 id="titu">Casas en renta</h1>
+
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/img/Casa1.png" width="50%" height="50%" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/Casa2.png" width="50%" height="50%" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/Casa3.png" width="50%" height="50%" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/Casa4.png" width="50%" height="50%" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/Casa5.png" width="50%" height="50%" alt="...">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div id="Botones">
+  <button type="button" class="btn btn-primary btn-lg"> <a href="/busc_casas_inv/" id="abtn">  Buscar casas en renta </a> </button>
+  
+</div>
+{% endif %}
+
+
+{%  if session['logged_in'] == True  %}
+ 
+     
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+    <h1 id="titu">Casas en renta</h1>
+ 
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/Casa1.png" width="50%" height="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/Casa2.png" width="50%" height="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/Casa3.png" width="50%" height="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/Casa4.png" width="50%" height="50%" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/Casa5.png" width="50%" height="50%" alt="...">
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div id="Botones">
+    <button type="button" class="btn btn-primary btn-lg"> <a href="/busc_casas/" id="abtn">  Buscar casas en renta </a> </button>
+
+    <button type="button" class="btn btn-secondary btn-lg"><a href="/lista_rentas/" id="abtn">  Lista de rentas anteriores </a></button>
+    
+  </div>
+
+{% else %}
+    <div class="contenedor__todo">
+        <div class="caja__trasera">
+            <div class="caja__trasera-register">
+                <h3 id="inicio_regis"> ¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                
+                <button id="btn__iniciar-sesion"><a href="/login">Iniciar sesión</a></button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3 id="inicio_regis">¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse"> <a href="/register">Registrarse</a></button>
+            </div>
+            <div class="caja__trasera-register">
+              <h3 id="inicio_regis">¿Quieres iniciar como invitado?</h3>
+              <button id="btn__registrarse"> <a href="/invitado">Invitado</a></button>
+          </div>
+        </div>   
+    </div>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

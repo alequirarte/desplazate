@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Departamento{% endblock %}
+{% block head %}
+{{super()}}
+
+<style>
+    button {
+        display: inline-block;
+        background-color: #7DC855;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 12px 30px;
+        transition: all .5s;
+
+        
+    }
+
+    input {
+        margin-right: 10px;
+
+    }
+
+    label {
+        font-weight: bold;
+        color:white;
+    }
+</style>
+
+{% endblock %}
+{% block body %}
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_mascotas">
+
+        <section class="section">
+            <div class="columns">
+                <div class="column">
+                    <h3 id="titu">Editar casa</h3>
+                    <form action="{{url_for('actualizar_depa')}}" method="post">
+                        {# Enviar el id en un campo oculto #}
+                        <input type="hidden" name="id" value="{{depa[0]}}">
+                        <label for="direccion">Dirección:</label>
+                        <input value="{{depa[1]}}" required type="text" class="input" placeholder="Dirección" name="direccion" id="direccion">
+                        <label for="precio">Precio:</label>
+                        <input value="{{depa[2]}}" required type="number" class="input" placeholder="Precio" name="precio" id="precio">
+                        <label for="cp">Código Postal:</label>
+                        <input value="{{depa[3]}}" required type="number" class="input" placeholder="Código Postal" name="cp" id="cp">
+                        <label for="detalles">Detalles:</label>
+                        <input value="{{depa[4]}}" required type="text" class="input" placeholder="Detalles" name="detalles" id="detalles">
+                        
+                        <button type="submit">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+
+    </div>
+  
+</div>
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Listas de departamentos {% endblock %}
+{% block head %}
+{{super()}}
+
+{% endblock %}
+{% block body %}
+
+
+
+<div class="contenedor__animal">
+    
+    <div  class="caja__trasera_mascotas"> 
+        <h2 id="titu"> Departamentos disponibles</h2>  
+
+        
+        <div>
+            <table>
+                
+                <tr>
+                    <th> id_dep </th>
+                    <th> Propietario </th>
+                    <th > Dirección </th>
+                    <th > Precio (MXN) </th>
+                    <th > Código Postal </th>
+                    <th > Detalles </th>
+                    <th> </th>
+                   
+                </tr>
+               
+                <tr>
+
+                    {% for id,diccionario in diccionario_casas.items() %} 
+                      <th> <a href="/departamento/{{diccionario[0]}}" > {{diccionario[0]}}  </a></th>
+                      <th>José Antonio </th>
+                      <th>{{diccionario[1]}} </th>
+                      <th>{{diccionario[2]}} </th>
+                      <th>{{diccionario[3]}} </th>
+                      <th>{{diccionario[4]}} </th>
+                      <th><a href="{{url_for('editar_depa', id=diccionario[0])}}" >Editar</a></th>
+                      
+
+                
+                  </tr>
+
+                
+          
+              
+                     {% endfor %}
+              </table>
+           
+
+        </div>
+
+       
+
+
+
+
+    </div>
+</div>
+
+
+        
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
